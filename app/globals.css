@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .h1 {
+    font-size: 4.5rem;
+    letter-spacing: calc(-0.02 * 4.5rem);
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .h2 {
+    font-size: 4rem;
+    letter-spacing: calc(-0.02 * 4rem);
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .h3 {
+    font-size: 3.375rem;
+    letter-spacing: calc(-0.02 * 3.375rem);
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .h4 {
+    font-size: 2.25rem;
+    letter-spacing: calc(-0.02 * 2.25rem);
+    line-height: normal;
+    font-weight: bold;
+  }
+
+  .h5 {
+    font-size: 1.75rem;
+    letter-spacing: calc(-0.02 * 1.75rem);
+    font-weight: bold;
+    line-height: 2.25rem;
+  }
+
+  .p1-semi {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+  }
+
+  .p1-regular {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: calc(-0.02 * 1.5rem);
+  }
+
+  .p2-bold {
+    font-size: 1.125rem;
+    letter-spacing: calc(-0.02 * 1.125rem);
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .p2-medium {
+    font-size: 1.125rem;
+    letter-spacing: calc(-0.02 * 1.125rem);
+    font-weight: 500;
+    line-height: 1.438rem;
+  }
+
+  .p2-regular {
+    font-size: 1.125rem;
+    letter-spacing: calc(-0.02 * 1.125rem);
+    line-height: 1.875rem;
+  }
+
+  .p3-medium {
+    font-weight: 500;
+    letter-spacing: calc(-0.02 * 1rem);
+    line-height: normal;
+  }
+
+  .p3-regular {
+    line-height: 1.25;
+    letter-spacing: calc(-0.02 * 1rem);
+  }
+}
