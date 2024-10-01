@@ -1,3 +1,4 @@
-import { pricingPlans } from "./pricingPlans";
+import { pricingPlans } from './pricingPlans'
+import { sponsors } from './sponsors'
 
-export { pricingPlans };
+export { pricingPlans, sponsors }
