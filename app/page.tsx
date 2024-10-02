@@ -6,7 +6,6 @@ import StaticPricingPlans from './ui/static-pricing-plans'
 import { sponsors } from './data'
 import clsx from 'clsx'
 import Testimonials from './ui/testimonials'
-
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
@@ -383,7 +382,9 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center lg:items-start space-y-16">
             <div className="text-center text-black relative container flex flex-col items-center justify-center">
               <h2 className="h4 md:h3 lg:h2 xl:h1 relative z-10 leading-10">
-                What Our Clients Say
+                What Our
+                <br className="md:hidden" />
+                Clients Say
               </h2>
             </div>
             {/* Testimonials Cards */}

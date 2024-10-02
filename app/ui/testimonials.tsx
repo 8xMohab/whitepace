@@ -1,10 +1,8 @@
 'use client'
-import React from 'react'
+import Image from 'next/image'
+import React, { useEffect } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import clsx from 'clsx'
-import CheckCustomIcon from './custom-icons/check'
-import { ArrowRightIcon } from '@radix-ui/react-icons'
-import Button from './components/button'
 import { testimonials } from '../data'
 import Autoplay from 'embla-carousel-autoplay'
 import { DotButton, useDotButton } from './components/emblaCarouselDotButton'
@@ -16,7 +14,7 @@ export default function Testimonials({
 }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
-      loop: false,
+      loop: true,
       breakpoints: {
         '(min-width: 768px)': { loop: true },
       },
@@ -25,15 +23,34 @@ export default function Testimonials({
   )
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi) // my own hook goddamn it
-
+  
   return (
     <div className={className}>
-      <div ref={emblaRef} className="overflow-hidden">
-        <div className="grid grid-flow-col auto-cols-[100%] max-w-screen-sm md:max-w-full md:auto-cols-[65%] items-center">
+      <div ref={emblaRef} className="">
+        <div className="grid grid-flow-col auto-cols-[100%] max-w-screen-sm md:max-w-full md:auto-cols-[55%] items-center">
           {testimonials.map((testimonial, index) => (
-            <div key={`contentKey:${testimonial.name}:${index}`} className="">
-              <h2>{testimonial.name}</h2>
-              <QoutesCustomIcon />
+            <div
+              key={`contentKey:${testimonial.name}:${index}`}
+              className="mx-4 space-y-10 p-5 shadow-custom-shadow rounded-xl"
+            >
+              <div className="border-b border-b-black space-y-8 pb-10">
+                <QoutesCustomIcon />
+                <p className="p2-regular">{testimonial.text}</p>
+              </div>
+              <div className="space-y-6">
+                <div className="w-16 h-16  relative">
+                  <Image
+                    src={testimonial.avatar}
+                    fill
+                    alt="a place holder image"
+                    className="object-cover rounded-full"
+                  />
+                </div>
+                <div className="space-y-4">
+                  <p className="p2-bold">{testimonial.name}</p>
+                  <p className="p2-regular">{testimonial.jobTitle}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
