@@ -5,6 +5,7 @@ import PricingPlans from './ui/pricing-plans'
 import StaticPricingPlans from './ui/static-pricing-plans'
 import { sponsors } from './data'
 import clsx from 'clsx'
+import Testimonials from './ui/testimonials'
 
 export default function Home() {
   return (
@@ -39,7 +40,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      jk
       {/* work management section */}
       <section className="bg-white relative">
         {/* background illustrations */}
@@ -319,6 +319,79 @@ export default function Home() {
           </ul>
         </section>
       </div>
+      {/* Favorite apps section  */}
+      <section className="flex flex-col items-center justify-center container lg:flex-row lg:items-center py-20 md:py-36">
+        <div className="space-y-16 order-2 flex flex-col items-center justify-center lg:items-start lg:order-2">
+          <div className="text-center space-y-6 lg:text-left relative">
+            <h2 className="h4 md:h3 lg:h2 xl:h1 relative z-10">
+              Work with Your Favorite Apps Using whitepace
+            </h2>
+            <p className="p2-regular">
+              Whitepace teams up with your favorite software. Integrate with
+              over 1000+ apps with Zapier to have all the tools you need for
+              your project success.
+            </p>
+          </div>
+          <Button
+            href="#"
+            variant="primary"
+            className="py-5 px-10 p2-regular lg:p2-medium lg:p-5"
+          >
+            Read more
+            <ArrowRightIcon className="w-5 h-5 ml-2" />
+          </Button>
+        </div>
+        <div className="w-full flex items-center justify-center order-1 lg:order-1 mb-24 lg:mb-0 lg:mr-24">
+          <div className="relative w-[286px] h-[231px] md:hidden">
+            <Image
+              src="/illustrations/apps-small.svg"
+              fill
+              alt="a place holder image"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative w-[485px] h-[392px] hidden md:block lg:hidden">
+            <Image
+              src="/illustrations/apps-medium.svg"
+              fill
+              alt="a place holder image"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative w-[528px] h-[427px] hidden lg:block xl:hidden">
+            <Image
+              src="/illustrations/apps-large.svg"
+              fill
+              alt="a place holder image"
+              className="object-cover"
+            />
+          </div>
+          <div className="relative w-[582px] h-[470px] hidden xl:block">
+            <Image
+              src="/illustrations/apps-xl.svg"
+              fill
+              alt="a place holder image"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-24 md:py-36 bg-white text-black">
+        <div className="flex flex-col items-center justify-center lg:flex-row lg:items-center">
+          <div className="flex flex-col items-center justify-center lg:items-start space-y-16">
+            <div className="text-center text-black relative container flex flex-col items-center justify-center">
+              <h2 className="h4 md:h3 lg:h2 xl:h1 relative z-10 leading-10">
+                What Our Clients Say
+              </h2>
+            </div>
+            {/* Testimonials Cards */}
+            <Testimonials className="lg:hidden" />
+            <StaticPricingPlans className="hidden lg:flex" />
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
