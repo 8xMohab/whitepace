@@ -3,6 +3,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Button from "./components/button";
 import MobileNav from "./mobile-nav";
 import Link from "next/link";
+import Image from "next/image";
 const navigation = [
   {
     title: "Products",
@@ -25,8 +26,8 @@ const navigation = [
 export default function NavBar() {
   return (
     <nav className="flex justify-between py-4 items-center">
-      <div className="w-[134px] md:w-[191px]">
-        <img src="/logo-white.svg" alt="" />
+      <div className="w-[134px] h-[24px] lg:w-[191px] lg:h-[34px] relative">
+        <Image src="/logo-white.svg" alt="" fill />
       </div>
       <div className="flex items-center">
         <div className="hidden xl:flex mr-16">

@@ -43,6 +43,7 @@ const config: Config = {
         secondaryB: '#A7CEFC',
         white: '#FFF',
         black: '#212529',
+        'border-custom-color': '#2E4E73',
       },
     },
   },

@@ -20,9 +20,9 @@ const BaseSvg: React.FC<BaseSvgProps> = (props) => {
 
 const QoutesCustomIcon: React.FC = () => {
   return (
-    <div className="flex">
-      <BaseSvg className="w-6 text-primaryA" />
-      <BaseSvg className="w-6 text-primaryA" />
+    <div className="flex space-x-2 lg:space-x-3">
+      <BaseSvg className="w-6 lg:w-9 text-current" />
+      <BaseSvg className="w-6 lg:w-9 text-current" />
     </div>
   )
 }
