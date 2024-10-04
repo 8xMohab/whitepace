@@ -1,24 +1,24 @@
-"use client";
-import React, { useState } from "react";
-import { ArrowRightIcon, Cross1Icon } from "@radix-ui/react-icons";
-import Button from "./components/button";
-import * as Accordion from "@radix-ui/react-accordion";
+'use client'
+import React, { useState } from 'react'
+import {
+  ArrowRightIcon,
+  Cross1Icon,
+  HamburgerMenuIcon,
+} from '@radix-ui/react-icons'
+import Button from './components/button'
+import * as Accordion from '@radix-ui/react-accordion'
 
 export default function MobileNav() {
-  const [list, setList] = useState(false);
-  let listPosition;
+  const [list, setList] = useState(false)
+  let listPosition
   if (list) {
-    listPosition = "translate-x-[0%]";
+    listPosition = 'translate-x-[0%]'
   } else {
-    listPosition = "translate-x-[100%]";
+    listPosition = 'translate-x-[100%]'
   }
   return (
-    <div className="xl:hidden">
-      <img
-        src="/icons/hamburger-menu.svg"
-        alt=""
-        onClick={() => setList(true)}
-      />
+    <div className="xl:hidden z-30">
+      <HamburgerMenuIcon width={36} height={36} onClick={() => setList(true)} />
       <div
         className={`fixed top-0 left-0 w-full h-full bg-white ${listPosition} text-black`}
       >
@@ -70,5 +70,5 @@ export default function MobileNav() {
         </div>
       </div>
     </div>
-  );
+  )
 }

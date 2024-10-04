@@ -1,27 +1,27 @@
-import { ArrowRightIcon, ChevronDownIcon } from "@radix-ui/react-icons";
-import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-import Button from "./components/button";
-import MobileNav from "./mobile-nav";
-import Link from "next/link";
-import Image from "next/image";
+import { ArrowRightIcon, ChevronDownIcon } from '@radix-ui/react-icons'
+import * as NavigationMenu from '@radix-ui/react-navigation-menu'
+import Button from './components/button'
+import MobileNav from './mobile-nav'
+import Link from 'next/link'
+import Image from 'next/image'
 const navigation = [
   {
-    title: "Products",
-    items: ["Product A", "Product B", "Prodcut C"],
+    title: 'Products',
+    items: ['Product A', 'Product B', 'Prodcut C'],
   },
   {
-    title: "Solutions",
-    items: ["Solution A", "Solution B", "Solution C"],
+    title: 'Solutions',
+    items: ['Solution A', 'Solution B', 'Solution C'],
   },
   {
-    title: "Resources",
-    items: ["Resource A", "Resource B", "Resource C"],
+    title: 'Resources',
+    items: ['Resource A', 'Resource B', 'Resource C'],
   },
   {
-    title: "Pricing",
-    items: ["Price A", "Price B", "Price C"],
+    title: 'Pricing',
+    items: ['Price A', 'Price B', 'Price C'],
   },
-];
+]
 
 export default function NavBar() {
   return (
@@ -65,5 +65,5 @@ export default function NavBar() {
         <MobileNav />
       </div>
     </nav>
-  );
+  )
 }
