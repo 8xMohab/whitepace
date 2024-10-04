@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Figma Template URL: [Figma Whitepace](https://www.figma.com/community/file/1156860863353724933)
-- Live Site URL: [Netlify](https://chimerical-sopapillas-5843ee.netlify.app/)
+- Live Site URL: [Netlify](https://the-whitepace-service.netlify.app)
 
 ## My process
 
